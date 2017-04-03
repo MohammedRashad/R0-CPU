@@ -2,4 +2,22 @@
 
 ![alt tag](https://s24.postimg.org/bmq9o00s5/image.png)
 
-8-bit Processor built on Von Neumann Architecture 
+# Intro
+
+WIP
+
+# Specs
+
+WIP
+
+# Architecture
+
+WIP
+
+# Resources 
+
+WIP
+
+# License
+
+This Project is signed under MIT License.
