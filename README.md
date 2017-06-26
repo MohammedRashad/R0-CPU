@@ -14,10 +14,6 @@ WIP
 
 WIP
 
-# Resources 
-
-WIP
-
 # License
 
 This Project is signed under MIT License.
