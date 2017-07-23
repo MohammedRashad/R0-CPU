@@ -4,11 +4,46 @@
 
 # Intro
 
-WIP
+**R0** is a hard-wired 8-bit CPU, built on Von Neumann Architecture.
+It was built as an application on the theory of Computer Organization.
 
-# Specs
 
-WIP
+# Instruction Set 
+
+- Half of the instructions in the instruction set fit into one byte.
+
+- These instructions are identified by a 0 in the most-significant bit in the instruction, i.e. op1 = 0X.
+
+- The 4 bits of opcode are split into op1 and op2.
+
+- Rd is the destination register, and Rs is the source register.
+
+- The other half of the instruction set are two-byte instructions. The first byte has the same format as above, and it is followed by an 8-bit constant or immediate value
+
+- These two-byte instructions are identified by a 1 in the most-significant bit in the instruction, i.e. op1 = 1X.
+
+- With 4 operation bits, there are 16 instructions.
+
+
+| op1	| op2 |	Mnemonic	| Purpose|
+|---|---|---|---|
+| 00	| 00 |	AND |Rd, Rs	Rd = Rd AND Rs |
+| 00	| 01 |	OR | Rd, Rs	Rd = Rd OR Rs |
+| 00	| 10 |	ADD | Rd, Rs	Rd = Rd + Rs |
+| 00	| 11 |	SUB | Rd, Rs	Rd = Rd - Rs |
+| 01	| 00 |	LW | Rd, (Rs)	Rd = Mem[Rs] |
+| 01	| 01 |	SW | Rd, (Rs)	Mem[Rs] = Rd |
+| 01	| 10 |	MOV |Rd, Rs	Rd = Rs |
+| 01	| 11 |	NOP |	Do nothing |
+| 10	| 00 |	JEQ | Rd, immed	PC = immed if Rd == 0 |
+| 10 |	01 |	JNE |Rd, immed	PC = immed if Rd != 0 |
+| 10 |	10 |	JGT | Rd, immed	PC = immed if Rd > 0 |
+| 10 |	11 |	JLT | Rd, immed	PC = immed if Rd < 0 |
+| 11 |	00 |	LW  | Rd, immed	Rd = Mem[immed] |
+| 11	| 01 |	SW  | Rd, immed	Mem[immed] = Rd |
+| 11	| 10	| LI  | Rd, immed	Rd = immed |
+| 11 |	11 |	JMP | immed	PC = immed |
+
 
 # Architecture
 
