@@ -4,7 +4,7 @@
 
 # Intro
 
-**R0** is a hard-wired 8-bit CPU, built on Von Neumann Architecture.
+**R0** is a hard-wired 8-bit CPU, built on Von Neumann Architecture.<br/>
 It was built as an application on the theory of Computer Organization.
 
 
